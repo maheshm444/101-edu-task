@@ -1,17 +1,24 @@
 # Application for Image Search
 
 ## Overview
-This is a payment application which targets the user to search any sort of images from the application. The App internally uses Pixabay API to fetch data from backend.
+This is a search application which targets the user to search any sort of images from the application. The App internally uses Pixabay API to fetch data from backend.
 
 ### The features of this application are as follows
 * Search Images based on the user's need
 * Supports both Lanscape and Portrait mode
-* User navigate back to home screen can view the recent image which they have viewed.
+* User navigated back to home screen can view the recent image which they have viewed.
 
 Screens of the Application
+Portrait Mode
 * [Home](https://ibb.co/hRKmyHC)
 * [Details Screen](https://ibb.co/3ccF43n)
 * [Recently Selected Image highlighted screen](https://ibb.co/rccg8kL)
+
+Landscape Mode
+* [Home](https://ibb.co/vwyvNQM)
+* [Details Screen](https://ibb.co/zH9YdpC)
+* [Recently Selected Image highlighted screen](https://ibb.co/sysp2YS)
+
 
 The [Product Demo Android](https://www.loom.com/share/392359e1d0674471a10fad38e333c02d) could be seen here.
 
