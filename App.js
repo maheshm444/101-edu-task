@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { LogBox } from 'react-native'
+import HomeScreen from './screens/HomeScreen'
+import ImageDetails from './screens/ImageDetails'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+const Stack = createNativeStackNavigator()
 
 export default function App() {
+  LogBox.ignoreLogs(['Warning: ...'])
+  LogBox.ignoreAllLogs()
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name='MainHome'
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name='ImageDetails'
+            component={ImageDetails}
+            options={{ headerShown: true, title: 'Image Details' }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
